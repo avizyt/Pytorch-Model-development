@@ -7,7 +7,7 @@ class CNNClassifier(nn.Module):
     def __init__(self, in_features, n_class) -> None:
         super(CNNClassifier, self).__init__()
         # Encoding
-        self.conv2 = nn.Conv2d(in_features, 32, kernel_size=3, stride=1, padding=1 )
+        self.conv1 = nn.Conv2d(in_features, 32, kernel_size=3, stride=1, padding=1 )
         self.batchN1 = nn.BatchNorm2d(32)
 
         self.conv2 = nn.Conv2d(32, 64, kernel_size=3, stride=1, padding=1 )
